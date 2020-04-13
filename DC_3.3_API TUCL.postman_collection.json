@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "e950a5d8-9b7a-4fa8-bb3c-6937a8bfdfec",
+		"name": "DC_3.3_API TUCL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1st_API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "text/xml"
+					},
+					{
+						"key": "soapAction",
+						"type": "text",
+						"value": "http://tempuri.org/IExternalSolutionExecution/ExecuteXMLString"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\">\r\n        <soapenv:Header />\r\n        <soapenv:Body>\r\n          <tem:ExecuteXMLString>\r\n            <tem:request>\r\n              <![CDATA[ \r\n\r\n      <DCRequest xmlns=\"http://transunion.com/dc/extsvc\">\r\n        <Authentication type=\"OnDemand\">\r\n            <UserId>IN8001DC01_UAT001</UserId>\r\n            <Password>Absli@123</Password>\r\n         </Authentication>\r\n         <RequestInfo>\r\n              <SolutionSetId>23</SolutionSetId>\r\n              <ExecuteLatestVersion>true</ExecuteLatestVersion>\r\n              <ExecutionMode>NewWithContext</ExecutionMode>\r\n        </RequestInfo>\r\n        <Fields>\r\n          <Field key=\"Applicants\">\r\n           \r\n                &lt;Applicants&gt;\r\n        &lt;Applicant&gt;\r\n          &lt;ApplicantType&gt;Main&lt;/ApplicantType&gt;\r\n          &lt;ApplicantFirstName&gt;MABEL&lt;/ApplicantFirstName&gt;\r\n          &lt;ApplicantMiddleName&gt;&lt;/ApplicantMiddleName&gt;\r\n          &lt;ApplicantLastName&gt;&lt;/ApplicantLastName&gt;\r\n          &lt;DateOfBirth&gt;30041972&lt;/DateOfBirth&gt;\r\n          &lt;Gender&gt;Male&lt;/Gender&gt;\r\n          &lt;EmailAddress&gt;&lt;/EmailAddress&gt;\r\n          &lt;CompanyName&gt;&lt;/CompanyName&gt;\r\n          &lt;Identifiers&gt;\r\n            &lt;Identifier&gt;\r\n              &lt;IdNumber&gt;BVMPS3258L&lt;/IdNumber&gt;\r\n              &lt;IdType&gt;01&lt;/IdType&gt;\r\n            &lt;/Identifier&gt;\r\n            &lt;Identifier&gt;\r\n              &lt;IdNumber&gt;873154092065&lt;/IdNumber&gt;\r\n              &lt;IdType&gt;06&lt;/IdType&gt;\r\n            &lt;/Identifier&gt;\r\n          &lt;/Identifiers&gt;\r\n          &lt;Telephones&gt;\r\n            &lt;Telephone&gt;\r\n              &lt;TelephoneExtension&gt;&lt;/TelephoneExtension&gt;\r\n              &lt;TelephoneNumber&gt;8012124196&lt;/TelephoneNumber&gt;\r\n              &lt;TelephoneType&gt;01&lt;/TelephoneType&gt;\r\n            &lt;/Telephone&gt;\r\n             &lt;Telephone&gt;\r\n              &lt;TelephoneExtension&gt;&lt;/TelephoneExtension&gt;\r\n              &lt;TelephoneNumber&gt;9598800765&lt;/TelephoneNumber&gt;\r\n              &lt;TelephoneType&gt;01&lt;/TelephoneType&gt;\r\n            &lt;/Telephone&gt;\r\n          &lt;/Telephones&gt;\r\n          &lt;Addresses&gt;\r\n            &lt;Address&gt;\r\n              &lt;AddressLine1&gt;VILLAGE -KAMALPUR&lt;/AddressLine1&gt;\r\n              &lt;AddressLine2&gt;SPOST - KAMALPUR&lt;/AddressLine2&gt;\r\n              &lt;AddressLine3&gt;DIST- KASGANG U.P.&lt;/AddressLine3&gt;\r\n              &lt;AddressLine4&gt;&lt;/AddressLine4&gt;\r\n              &lt;AddressLine5&gt;&lt;/AddressLine5&gt;\r\n              &lt;AddressType&gt;01&lt;/AddressType&gt;\r\n              &lt;City&gt;Etah&lt;/City&gt;\r\n              &lt;PinCode&gt;207246&lt;/PinCode&gt;\r\n              &lt;ResidenceType&gt;01&lt;/ResidenceType&gt;\r\n              &lt;StateCode&gt;09&lt;/StateCode&gt;\r\n            &lt;/Address&gt;\r\n          &lt;/Addresses&gt;\r\n          &lt;NomineeRelation&gt;&lt;/NomineeRelation&gt;\r\n          &lt;NomineeName&gt;&lt;/NomineeName&gt;\r\n          &lt;MemberRelationType4&gt;&lt;/MemberRelationType4&gt;\r\n          &lt;MemberRelationName4&gt;&lt;/MemberRelationName4&gt;\r\n          &lt;MemberRelationType3&gt;&lt;/MemberRelationType3&gt;\r\n          &lt;MemberRelationName3&gt;&lt;/MemberRelationName3&gt;\r\n          &lt;MemberRelationType2&gt;&lt;/MemberRelationType2&gt;\r\n          &lt;MemberRelationName2&gt;&lt;/MemberRelationName2&gt;\r\n          &lt;MemberRelationType1&gt;&lt;/MemberRelationType1&gt;\r\n          &lt;MemberRelationName1&gt;&lt;/MemberRelationName1&gt;\r\n          &lt;KeyPersonRelation&gt;&lt;/KeyPersonRelation&gt;\r\n          &lt;KeyPersonName&gt;&lt;/KeyPersonName&gt;\r\n          &lt;MemberOtherId3&gt;&lt;/MemberOtherId3&gt;\r\n          &lt;MemberOtherId3Type&gt;&lt;/MemberOtherId3Type&gt;\r\n          &lt;MemberOtherId2&gt;&lt;/MemberOtherId2&gt;\r\n          &lt;MemberOtherId2Type&gt;&lt;/MemberOtherId2Type&gt;\r\n          &lt;MemberOtherId1&gt;&lt;/MemberOtherId1&gt;\r\n          &lt;MemberOtherId1Type&gt;&lt;/MemberOtherId1Type&gt;\r\n          &lt;Accounts&gt;\r\n            &lt;Account&gt;\r\n              &lt;AccountNumber&gt;&lt;/AccountNumber&gt;\r\n            &lt;/Account&gt;\r\n          &lt;/Accounts&gt;\r\n        &lt;/Applicant&gt;\r\n      &lt;/Applicants&gt;\r\n\r\n      </Field>\r\n      <Field key=\"ApplicationData\">\r\n       \r\n    \r\n       &lt;ApplicationData&gt;\r\n      &lt;Purpose&gt;10&lt;/Purpose&gt;\r\n      &lt;Amount&gt;144000&lt;/Amount&gt;\r\n      &lt;ScoreType&gt;01&lt;/ScoreType&gt;\r\n      &lt;GSTStateCode&gt;09&lt;/GSTStateCode&gt;\r\n      &lt;MemberCode&gt;IN80011002_UATC2C&lt;/MemberCode&gt;\r\n      &lt;Password&gt;8cIln#yjnv&lt;/Password&gt;\r\n      &lt;CibilBureauFlag&gt;False&lt;/CibilBureauFlag&gt;\r\n\t\t&lt;DSTuNtcFlag&gt;False&lt;/DSTuNtcFlag&gt;\r\n\t\t&lt;IDVerificationFlag&gt;False&lt;/IDVerificationFlag&gt;\r\n\t\t&lt;MFIBureauFlag&gt;True&lt;/MFIBureauFlag&gt;\r\n\t\t&lt;NTCProductType&gt;PL&lt;/NTCProductType&gt;\r\n\t\t&lt;ConsumerConsentForUIDAIAuthentication&gt;N&lt;/ConsumerConsentForUIDAIAuthentication&gt;\r\n\t\t&lt;MFIEnquiryAmount&gt;&lt;/MFIEnquiryAmount&gt;\r\n\t\t&lt;MFILoanPurpose&gt;&lt;/MFILoanPurpose&gt;\r\n\t\t&lt;MFICenterReferenceNo&gt;&lt;/MFICenterReferenceNo&gt;\r\n\t\t&lt;MFIBranchReferenceNo&gt;&lt;/MFIBranchReferenceNo&gt;\r\n\t\t&lt;FormattedReport&gt;True&lt;/FormattedReport&gt;\r\n\t&lt;/ApplicationData&gt;\r\n\r\n   \r\n        </Field>\r\n        <Field key=\"FinalTraceLevel\">2</Field>\r\n        </Fields>\r\n        </DCRequest>        \r\n   ]]>\r\n        </tem:request>\r\n      </tem:ExecuteXMLString>\r\n    </soapenv:Body>\r\n  </soapenv:Envelope>"
+				},
+				"url": {
+					"raw": "https://www.test.transuniondecisioncentre.co.in/DC/TUCL/TU.IDS.ExternalServices/SolutionExecution/ExternalSolutionExecution.svc",
+					"protocol": "https",
+					"host": [
+						"www",
+						"test",
+						"transuniondecisioncentre",
+						"co",
+						"in"
+					],
+					"path": [
+						"DC",
+						"TUCL",
+						"TU.IDS.ExternalServices",
+						"SolutionExecution",
+						"ExternalSolutionExecution.svc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2nd_API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "text/xml"
+					},
+					{
+						"key": "soapAction",
+						"type": "text",
+						"value": "http://tempuri.org/IExternalSolutionExecution/RetrieveDocumentMetaDataXMLString"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\">\r\n        <soapenv:Header />\r\n        <soapenv:Body>\r\n          <tem:RetrieveDocumentMetaDataXMLString>\r\n            <tem:request>\r\n              <![CDATA[ \r\n\t\t<DCRequest xmlns=\"http://transunion.com/dc/extsvc\">\r\n  <Authentication type=\"Token\">\r\n    <UserId>****</UserId>\r\n    <Password>****</Password>\r\n  </Authentication>\r\n  <RetrieveDocumentMetaData>\r\n    <ApplicationId>****</ApplicationId>\r\n  </RetrieveDocumentMetaData>\r\n</DCRequest>        \r\n   ]]>\r\n        </tem:request>\r\n      </tem:RetrieveDocumentMetaDataXMLString>\r\n    </soapenv:Body>\r\n  </soapenv:Envelope>"
+				},
+				"url": {
+					"raw": "https://www.test.transuniondecisioncentre.co.in/DC/TUCL/TU.IDS.ExternalServices/SolutionExecution/ExternalSolutionExecution.svc",
+					"protocol": "https",
+					"host": [
+						"www",
+						"test",
+						"transuniondecisioncentre",
+						"co",
+						"in"
+					],
+					"path": [
+						"DC",
+						"TUCL",
+						"TU.IDS.ExternalServices",
+						"SolutionExecution",
+						"ExternalSolutionExecution.svc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3rd_API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "text/xml"
+					},
+					{
+						"key": "soapAction",
+						"type": "text",
+						"value": "http://tempuri.org/IExternalSolutionExecution/DownloadDocument"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\">\r\n        <soapenv:Header />\r\n        <soapenv:Body>\r\n          <tem:DownloadDocument>\r\n            <tem:request>\r\n              <![CDATA[ \r\n\t\t<DCRequest xmlns=\"http://transunion.com/dc/extsvc\">\r\n  <Authentication type=\"Token\">\r\n    <UserId>****</UserId>\r\n    <Password>****</Password>\r\n  </Authentication>\r\n  <DownloadDocument>\r\n    <ApplicationId>****</ApplicationId>\r\n    <DocumentId>****</DocumentId>\r\n  </DownloadDocument>\r\n</DCRequest>        \r\n   ]]>\r\n        </tem:request>\r\n      </tem:DownloadDocument>\r\n    </soapenv:Body>\r\n  </soapenv:Envelope>"
+				},
+				"url": {
+					"raw": "https://www.test.transuniondecisioncentre.co.in/DC/TUCL/TU.IDS.ExternalServices/SolutionExecution/ExternalSolutionExecution.svc",
+					"protocol": "https",
+					"host": [
+						"www",
+						"test",
+						"transuniondecisioncentre",
+						"co",
+						"in"
+					],
+					"path": [
+						"DC",
+						"TUCL",
+						"TU.IDS.ExternalServices",
+						"SolutionExecution",
+						"ExternalSolutionExecution.svc"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "d9c77ffe-41dc-4514-a130-05c8a9bb9787",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "f4f26614-bbc6-48ef-9939-442fb8d6e843",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
